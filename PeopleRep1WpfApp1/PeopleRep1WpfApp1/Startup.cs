@@ -15,6 +15,8 @@ namespace PeopleRep1WpfApp1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //to read razor page goodbye.cshtml in Pages folder
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,6 +26,10 @@ namespace PeopleRep1WpfApp1
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
+            //to read razor page goodbye.cshtml in Pages folder
+            app.UseMvc();
 
             app.Run(async (context) =>
             {
