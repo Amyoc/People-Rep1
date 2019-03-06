@@ -1,0 +1,34 @@
+﻿@page
+@model PeopleRep1WpfApp1.Pages.page1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>page1</title>
+</head>
+<body>
+    <h1>Hello from a razor page.</h1>
+    <h2>It is @DateTime.Now.Year</h2>
+    <h2>@Model.Message</h2>
+
+    <form method="post">
+        <!--<label for="number1">Number 1</label>-->
+        <!--Using TagHelpers-->
+        <label asp-for=Number01>Number 1</label>
+        <!--<input type="number" id="number1" name="number01" value=@Model.Number01 />-->
+        <!--Using TagHelpers-->
+        <input asp-for=Number01 />
+        <!--<label asp-for=Number02>Number 2</label>-->
+        <label asp-for=Number02></label>
+        <input asp-for=Number02 />
+        <button type="submit"> Press to see what happens</button>
+    </form>
+
+</body>
+</html>

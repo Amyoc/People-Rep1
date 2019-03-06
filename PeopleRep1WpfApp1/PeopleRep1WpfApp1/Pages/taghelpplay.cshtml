@@ -1,0 +1,92 @@
+﻿@page
+@model PeopleRep1WpfApp1.Pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>taghelpplay</title>
+</head>
+<body>
+    <form method="post">
+        <label asp-for=Number1></label>
+        <input asp-for=Number1>
+        <button type="submit"> Enter your int number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number2></label>
+        <input asp-for=Number2>
+        <button type="submit"> Enter you nullable int number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number3></label>
+        <input asp-for=Number3>
+        <button type="submit"> Enter your double number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number4></label>
+        <input asp-for=Number4>
+        <button type="submit"> Enter your nullable double number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number5></label>
+        <input asp-for=Number5>
+        <button type="submit"> Enter your decimal number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number6></label>
+        <input asp-for=Number6>
+        <button type="submit"> Enter your nullable decimal number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number7></label>
+        <input asp-for=Number7>
+        <button type="submit"> Enter your float number</button>
+    </form>
+    <form method="post">
+        <label asp-for=Number8></label>
+        <input asp-for=Number8>
+        <button type="submit"> Enter your nullable float number</button>
+    </form>
+    <!--string example-->
+    <form method="post">
+        <label asp-for=String9></label>
+        <input asp-for=String9>
+        <button type="submit"> Enter your string</button>
+    </form>
+    <!--date example-->
+    <form method="post">
+        <label asp-for=Item10></label>
+        <input asp-for=Item10>
+        <button type="submit"> Enter your date</button>
+    </form>
+    <form method="post">
+        <input asp-for=Item11>
+        <label asp-for=Item11>Is contact allowed</label>
+    </form>
+
+    <label for="Winter">
+        <input value="Winter" id="Winter" type="radio" asp-for="Season2019">
+        Winter 2019
+    </label>
+    <label for="Spring">
+        <input value="Spring" id="Spring" type="radio" asp-for="Season2019">
+        Spring 2019
+    </label>
+    <label for="Summer">
+        <input value="Summer" id="Summer" type="radio" asp-for="Season2019">
+        Summer 2019
+    </label>
+    <label for="Autumn">
+        <input value="Autumn" id="Autumn" type="radio" asp-for="Season2019">
+        Autumn 2019
+    </label>
+
+    <button type="submit">Enter month</button>
+</body>
+</html>

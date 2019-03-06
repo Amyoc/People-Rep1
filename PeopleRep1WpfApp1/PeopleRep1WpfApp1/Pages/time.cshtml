@@ -1,0 +1,49 @@
+﻿@page
+@model PeopleRep1WpfApp1.Pages.timeModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>time</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>
+                Choose the days of the week
+            </legend>
+            @for (int j = 0; j < @Model.daysOfWeek.Length; j++)
+            {
+                <input asp-for=daySelected[j] />
+
+                <label asp-for=daySelected[j]>@Model.daysOfWeek[j]</label>
+            }
+        </fieldset>
+        <select asp-for=choosenMonths asp-items=Model.selectedMonths size="12"></select>
+        <button type="submit">Enter</button>
+    </form>
+
+    <ul>
+        @for (int j = 0; j < @Model.daysOfWeek.Length; j++)
+        {
+            if (@Model.daySelected[j])
+            {
+                <li>@Model.daysOfWeek[j]</li>
+            }
+        }
+    </ul>
+
+    <ol>
+        @for (int j = 0; j < @Model.choosenMonths.Length; j++)
+        {
+            <li>@Model.choosenMonths[j]</li>
+        }
+    </ol>
+</body>
+</html>

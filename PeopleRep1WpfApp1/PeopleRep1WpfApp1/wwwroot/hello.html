@@ -3,9 +3,95 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Hello from a static html file</h1>
+    <p>
+        <label for="temperature">Choose your temperature</label>
+
+        <input id="temperature" name="temp" type="range" min="16" max="30" step=".1">
+    </p>
+    <p>
+        <label for="numberchoice">Whats your numba?</label>
+        <input id="numberchoice" name="num" type="number" min="1" max="10" step="2">
+    </p>
+
+    <label for="01">
+        <input type="radio" id="01" value="add" name="operation" checked>Add
+    </label>
+    <label for="02">
+        <input type="radio" id="01" value="subtract" name="operation" checked>Subtract
+    </label>
+    <label for="03">
+        <input type="radio" id="01" value="divide" name="operation" checked>Divide
+    </label>
+    <label for="04">
+        <input type="radio" id="01" value="multiply" name="operation" checked>Multiply
+    </label>
+
+    <h3>Checkbox example 1</h3>
+    <form>
+        <fieldset>
+            <legend>Subject choices</legend>
+            <label for="s1b">
+                <input type="checkbox" id="s1b" name="maths">Mathematics
+            </label>
+            <label for="s2b">
+                <input type="checkbox" id="s2b" name="pe">Physical Education
+            </label>
+            <label for="s3b">
+                <input type="checkbox" id="s3b" name="history">History
+            </label>
+        </fieldset>
+    </form>
+
+    <h3>Checkbox example 2</h3>
+    <label for="s1">
+        <input type="checkbox" id="s1" name="subject">Mathematics
+    </label>
+    <label for="s2">
+        <input type="checkbox" id="s2" name="subject">Physical Education
+    </label>
+    <label for="s3">
+        <input type="checkbox" id="s3" name="subject">History
+    </label>
+    <fieldset>
+        <legend>Choose your car</legend>
+        <select name="cars" size="10">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi" selected>Audi</option>
+            <option value="jeep">Jeep</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Multiple select list example</legend>
+        <select name="cars" size="5" mulitple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi" selected>Audi</option>
+            <option value="jeep">Jeep</option>
+        </select>
+    </fieldset>
+    <fieldset>
+    <legend>DATA LIST AND OPTION EXAMPLE</legend>
+    <label for="myFruit">Whats your favourite fruit?</label>
+    <input type="text" id="myFruit" list="mySuggestion"/>
+    <datalist id="mySuggestion">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        </datalist>
+</fieldset>
+
 
 </body>
 </html>
